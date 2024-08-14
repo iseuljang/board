@@ -6,24 +6,38 @@
     <style>
         .menu{
             background-color: #ccd2ee;
-            text-align: center;
             height: 30px;
             margin: 5px;
+            /* text-align: center; */
+            /* div text 가운데 정렬 */
+            display: flex;
+            /* flexbox의 기본값은 row */
+            /* align-items 의 정렬 방향은 수직선이 됩니다 */
+            /* align-items: center; => 수직방향의 중앙 */
+            align-items: center;
+            /* justify-content의 정렬 방향은 주축의 수직 교차측 */
+            /* row 설정에서는 수평방향이 됩니다 */
+            justify-content: center;
         }
         .menu:hover{
             background-color: rgb(155, 171, 218);
             color: white;
             font-weight: bold;
+            cursor:pointer;
         }
         span{
             color: red;
         }
+        table{
+            background-color: white;
+        }
     </style>
 </head>
-<body>
+<body style="background-color: #EDEDF1;">
     <table border="1" width="800px" style="margin: auto;">
         <tr>
             <td colspan="2">
+                <!-- 헤더부분 시작 -->
                 <table width="100%">
                     <tr>
                         <td style="color: royalblue;">
@@ -35,28 +49,38 @@
                         </td>
                     </tr>
                 </table>
+                <!-- 헤더부분 종료 -->
             </td>
         </tr>
         <tr>
             <td width="30%" style="vertical-align: top;">
+                <!-- 메뉴부분 -->
                 <div class="menu">Java 학습게시판</div>
                 <div class="menu">HTML/CSS 학습게시판</div>
                 <div class="menu">JavaScript 학습게시판</div>
                 <div class="menu">Jquery 학습게시판</div>
+                <div class="menu">JSP 학습게시판</div>
                 <div class="menu">DBMS 학습게시판</div>
+                <div class="menu">Spring 학습게시판</div>
             </td>
             <td>
+                <!-- 내용 부분 -->
+                <!-- 게시판 머리 시작 -->
                 <table width="100%">
                     <tr>
+                        <!-- 선택된 게시판 이름 -->
                         <td style="color: royalblue;"><h3>자바 학습 게시판</h3></td>
                     </tr>
                     <tr>
                         <td style="text-align: right;">
+                            <!-- 글작성 버튼 -->
                             <a href="write.html">글쓰기</a>
                         </td>
                     </tr>
+                    <!-- 게시판 머리 종료 -->
                     <tr>
                         <td>
+                            <!-- 게시판 몸통 시작 -->
                             <table border="1" width="100%" style="text-align: center;">
                                 <tr>
                                     <th>번호</th>
@@ -136,12 +160,15 @@
                                     <td>10</td>
                                 </tr>
                             </table>
+                            <!-- 게시판 몸통 종료 -->
                         </td>
                     </tr>
                     <tr>
+                        <!-- 게시판 꼬리시작 -->
                         <td style="text-align: center;">
                             | &lt; &laquo; &lt; 1 2 3 4 5 6 7 8 9 10 &gt; &raquo; &gt; |
                         </td>
+                        <!-- 게시판 꼬리종료 -->
                     </tr>
                 </table>
             </td>
