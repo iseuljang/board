@@ -32,6 +32,10 @@
         }
         table{
             background-color: white;
+            border: 1px solid #ccd2ee;
+        }
+        #inTable td{
+            border: 1px solid #ceceee;
         }
         #login{
             background-color: #ccd2ee;
@@ -48,10 +52,41 @@
             font-weight: bold;
             cursor:pointer;
         }
+        #jBtn, #lBtn{
+            background-color: #ccd2ee;
+            color: rgb(53, 85, 180);
+            font-weight: bold;
+            border: 0;
+            height: 30px;
+            border-radius: 5px;
+            margin: 3px;
+            cursor:pointer;
+        }
+        #jBtn:hover, #lBtn:hover{
+            background-color: rgb(155, 171, 218);
+            color: white;
+            font-weight: bold;
+            cursor:pointer;
+        }
+        input{
+            height: 25px;
+            border: 0;
+            border-radius: 5px;
+            outline: none;
+            background-color: #ccd2ee;
+            color: royalblue;
+        }
+        input:focus{
+            font-weight: bold;
+            color: royalblue;
+        }
+        input[type="text"], input[type="password"], input[type="email"]{
+            width: 99%;
+        }
     </style>
 </head>
 <body style="background-color: #EDEDF1;">
-    <table border="1" width="800px" style="margin: auto;">
+    <table border="0" width="800px" style="margin: auto;">
         <tr>
             <td colspan="2">
                 <!-- 헤더부분 시작 -->
@@ -61,8 +96,8 @@
                             <h2>AWS 풀스택 학습 커뮤니티</h2>
                         </td>
                         <td style="text-align: right;">
-                            <a href="join.html">회원가입</a>&nbsp;&nbsp;
-                            <a href="login.html">로그인</a>&nbsp;
+                            <a href="join.html"><button id="jBtn">회원가입</button></a>
+                            <a href="login.html"><button id="lBtn">로그인</button></a>
                         </td>
                     </tr>
                 </table>
